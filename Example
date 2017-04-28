@@ -1,5 +1,7 @@
-# _MyRepository
-1) Последовательный алгоритм без средств TPL и LINQ.
+//# _MyRepository
+// В данном файле находится реализация алгоритмов на языке C#
+//A)	Получение общей статистики по встречаемости слов.
+//1) Последовательный алгоритм без средств TPL и LINQ.
 
 public static Dictionary<string, int> dic5 = new Dictionary<string, int>();
         public static void consistent_a()
@@ -28,7 +30,7 @@ public static Dictionary<string, int> dic5 = new Dictionary<string, int>();
                 }
             }
         }
-2) Алгоритм с применение LINQ-запросов.
+//2) Алгоритм с применение LINQ-запросов.
 
 static Dictionary<string, int> linq_a(string[] _files)
         {
@@ -51,7 +53,7 @@ static Dictionary<string, int> linq_a(string[] _files)
 
             return (wordCounts);
         }
-3) Алгоритм на базе методов Parallel.For или Parallel.ForEach.
+//3) Алгоритм на базе методов Parallel.For или Parallel.ForEach.
 
   public static ConcurrentDictionary<string, int> dic = new ConcurrentDictionary<string, int>();
 public static void ParallelForEach_a1()
@@ -81,7 +83,7 @@ public static void ParallelForEach_a1()
 
         }
 
-4) Алгоритм с применением PLINQ-запросов.
+//4) Алгоритм с применением PLINQ-запросов.
 static Dictionary<string, int> Plinq_a(string[] _files)
         {
             var rx1 = new Regex("([A-Z])", RegexOptions.IgnoreCase);
@@ -103,8 +105,8 @@ static Dictionary<string, int> Plinq_a(string[] _files)
 
             return (wordCounts);
         }
-B)	Поиск только 10 самых часто встречающихся слов. Результат работы: string[]
-1)	Последовательный алгоритм без средств TPL и LINQ.
+//B)	Поиск только 10 самых часто встречающихся слов. Результат работы: string[]
+//1)	Последовательный алгоритм без средств TPL и LINQ.
 
 public static Dictionary<string, int> dic6 = new Dictionary<string, int>();
 
@@ -134,7 +136,7 @@ public static Dictionary<string, int> dic6 = new Dictionary<string, int>();
                 }
             }
 
-2)	Алгоритм с применение LINQ-запросов.
+///2)	Алгоритм с применение LINQ-запросов.
 
 static string[] b_linq(string[] _files)
         {
@@ -156,7 +158,7 @@ static string[] b_linq(string[] _files)
 
             return (wordCounts3);
         }
-3)	Алгоритм на базе методов Parallel.For или Parallel.ForEach.
+//3)	Алгоритм на базе методов Parallel.For или Parallel.ForEach.
   public static ConcurrentDictionary<string, int> dic2 = new ConcurrentDictionary<string, int>();
 
         public static void ParallelForEach_b1()
@@ -198,7 +200,7 @@ static string[] b_linq(string[] _files)
 
 
         }
-4)	Алгоритм с применением PLINQ-запросов.
+//4)	Алгоритм с применением PLINQ-запросов.
 static string[] Plinq_b(string[] _files)
         {
             var rx = new Regex("([A-Z])", RegexOptions.IgnoreCase);
@@ -220,9 +222,9 @@ static string[] Plinq_b(string[] _files)
 
             return (wordCounts3);
         }
-C)	Распределение числа слов по длине (для построения «гистограммы»). Результат
-работы: Dictionary<int, int>, где ключ – длина слова, значение – число слов.
-1)	Последовательный алгоритм без средств TPL и LINQ.
+//C)	Распределение числа слов по длине (для построения «гистограммы»). Результат
+//работы: Dictionary<int, int>, где ключ – длина слова, значение – число слов.
+//1)	Последовательный алгоритм без средств TPL и LINQ.
 public static Dictionary<int, int> dic7 = new Dictionary<int, int>();
 
         public static void consistent_c()
@@ -259,7 +261,7 @@ public static Dictionary<int, int> dic7 = new Dictionary<int, int>();
 
             });
         }
-2)	Алгоритм с применение LINQ-запросов.
+//2)	Алгоритм с применение LINQ-запросов.
         public static Dictionary<int, int> c_linq(string[] _files)
         {
             char[] _delimeters = { '.', ',', ':', ';', '?', ' ', '/', '?', '-'};
@@ -279,7 +281,7 @@ public static Dictionary<int, int> dic7 = new Dictionary<int, int>();
             return (wordCounts2);
         }
 
-3)	Алгоритм на базе методов Parallel.For или Parallel.ForEach.
+//3)	Алгоритм на базе методов Parallel.For или Parallel.ForEach.
 public static ConcurrentDictionary<int, int> dic4 = new ConcurrentDictionary<int, int>();
 
         public static void ParallelForEach_c1()
@@ -305,7 +307,7 @@ public static ConcurrentDictionary<int, int> dic4 = new ConcurrentDictionary<int
 
             });
         }
-4)	Алгоритм с применением PLINQ-запросов.
+//4)	Алгоритм с применением PLINQ-запросов.
 public static Dictionary<int, int> Plinq_c(string[] _files)
         {
             char[] _delimeters = { '.', ',', ':', ';', '?', ' ', '/', '?', '-'};
